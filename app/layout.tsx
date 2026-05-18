@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Funding Choices stub for AdSense consent — uncomment and add publisher ID when ads launch.
             <script async src="https://fundingchoicesmessages.google.com/i/PUBLISHER_ID?ers=1" /> */}
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <Providers>{children}</Providers>
       </body>
     </html>

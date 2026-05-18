@@ -4,9 +4,10 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import posthog from 'posthog-js';
 import { PostHogProvider, usePostHog } from 'posthog-js/react';
 import { Suspense, useEffect } from 'react';
+import env from '@/lib/env';
 
 if (typeof window !== 'undefined') {
-  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
+  posthog.init(env.NEXT_PUBLIC_POSTHOG_KEY, {
     api_host: '/ingest',
     ui_host: 'https://us.posthog.com',
     capture_pageview: false,
@@ -14,7 +15,7 @@ if (typeof window !== 'undefined') {
     person_profiles: 'identified_only',
     persistence: 'localStorage+cookie',
   });
-  posthog.register({ site: process.env.NEXT_PUBLIC_SITE_ID });
+  posthog.register({ site: env.NEXT_PUBLIC_SITE_ID });
 }
 
 export function Providers({ children }: { children: React.ReactNode }) {
