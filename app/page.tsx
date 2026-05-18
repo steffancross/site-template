@@ -1,3 +1,3 @@
 export default function HomePage() {
-  return <main>Site Template</main>;
+  return <p>Replace per site.</p>;
 }

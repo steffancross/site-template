@@ -10,6 +10,7 @@
   },
   "observability": { "enabled": true },
   "vars": {
-    "NEXT_PUBLIC_SITE_ID": "site-template"
+    "NEXT_PUBLIC_SITE_ID": "site-template",
+    "NEXT_PUBLIC_SITE_NAME": "Site Template"
   }
 }
